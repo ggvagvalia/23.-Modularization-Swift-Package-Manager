@@ -9,30 +9,24 @@ import Foundation
 import Service
 
 
-protocol CatViewModelDelegate: AnyObject {
-    func catsFetched(_ cats: CatModel)
-}
-
 final class CatViewModel {
     // MARK: - Properties
-    public var catModel: CatModel?
-    weak  var delegate: CatViewModelDelegate?
+    public var catModel: CatModel? {
+        didSet { catsUpdated?() }
+    }
+    var catsUpdated: (() -> Void)?
     var service = Service.shared
     let urlString = "https://catfact.ninja/facts?max_length=100&limit=50"
     
     // MARK: - LifeCycle
     func viewDidLoad() {
-        getCatData()
+        fetchCatData()
     }
     
     // MARK: - fetchData
-    private func getCatData() {
-        service.fetchCatData(urlString: urlString) { [weak self] (currentCat: CatModel?) in
-            guard let cat = currentCat else { return }
-            DispatchQueue.main.async {
-                self?.catModel = cat
-                self?.delegate?.catsFetched(cat)
-            }
+    private func fetchCatData() {
+        service.fetchCatData(urlString: urlString) { (currentCat: CatModel?) in
+            self.catModel = currentCat
         }
     }
     

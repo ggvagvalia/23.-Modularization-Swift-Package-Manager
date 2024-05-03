@@ -20,8 +20,8 @@ class MainPage: UIViewController {
         return view
     }()
     
-    init() {
-        self.catsViewModel = CatViewModel()
+    init(catsViewModel: CatViewModel) {
+        self.catsViewModel = catsViewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -33,15 +33,13 @@ class MainPage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        catsViewModel.delegate = self
         catsViewModel.viewDidLoad()
-        //        catsTableView.reloadData()
+        reloadData()
     }
     
     // MARK: - SetupUI
     func setupUI() {
         view.addSubview(catsTableView)
-        //        navigationItem.hidesBackButton = true
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
         navigationItem.title = "Facts About Cats"
@@ -58,5 +56,12 @@ class MainPage: UIViewController {
         ])
     }
     
+    private func reloadData() {
+        catsViewModel.catsUpdated = { [weak self] in
+            DispatchQueue.main.async {
+                self?.catsTableView.reloadData()
+            }
+        }
+    }
 }
 

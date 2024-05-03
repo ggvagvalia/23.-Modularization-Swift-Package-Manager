@@ -8,7 +8,6 @@
 import Foundation
 
 public struct CatModel: Codable {
-    //    var current_page: Int
     var data: [Details]?
     
     public struct Details: Codable {

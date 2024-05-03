@@ -34,13 +34,3 @@ extension MainPage: UITableViewDelegate {
     }
     
 }
-
-extension MainPage: CatViewModelDelegate {
-    
-    func catsFetched(_ cats: CatModel) {
-        DispatchQueue.main.async {
-            self.catsTableView.reloadData()
-        }
-    }
-    
-}

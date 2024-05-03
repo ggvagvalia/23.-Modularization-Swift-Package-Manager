@@ -14,7 +14,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = UINavigationController(rootViewController: MainPage())
+        let viewModel = CatViewModel()
+        window.rootViewController = UINavigationController(rootViewController: MainPage(catsViewModel: viewModel))
         self.window = window
         window.backgroundColor = .tertiarySystemBackground
         window.makeKeyAndVisible()

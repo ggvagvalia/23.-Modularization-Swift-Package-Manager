@@ -50,6 +50,7 @@
 			children = (
 				94CCEB192BE2E83F009D97AE /* MainPage.swift */,
 				94C810D22BE3001C00547148 /* MainPageExtensions.swift */,
+				94CCEB2F2BE2EBBA009D97AE /* CustomTableViewCell.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -83,7 +84,6 @@
 			children = (
 				94CCEB2A2BE2EAA4009D97AE /* SupportingFiles */,
 				94CCEB292BE2EA89009D97AE /* App */,
-				94CCEB2E2BE2EB70009D97AE /* CustomViews */,
 				94CCEB2C2BE2EB35009D97AE /* Model */,
 				94CCEB2D2BE2EB3F009D97AE /* Scene */,
 				94CCEB2B2BE2EAC0009D97AE /* Resources */,
@@ -132,14 +132,6 @@
 				94C810CF2BE2F51600547148 /* MainViewModel */,
 			);
 			path = Scene;
-			sourceTree = "<group>";
-		};
-		94CCEB2E2BE2EB70009D97AE /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-				94CCEB2F2BE2EBBA009D97AE /* CustomTableViewCell.swift */,
-			);
-			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
