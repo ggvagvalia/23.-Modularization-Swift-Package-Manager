@@ -3,11 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		94C810CB2BE2F0B300547148 /* Service in Frameworks */ = {isa = PBXBuildFile; productRef = 94C810CA2BE2F0B300547148 /* Service */; };
+		943E117F2BE6816900ED2A92 /* Service in Frameworks */ = {isa = PBXBuildFile; productRef = 943E117E2BE6816900ED2A92 /* Service */; };
 		94C810CD2BE2F1AF00547148 /* CatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C810CC2BE2F1AF00547148 /* CatModel.swift */; };
 		94C810D12BE2F55700547148 /* CatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C810D02BE2F55700547148 /* CatViewModel.swift */; };
 		94C810D32BE3001C00547148 /* MainPageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C810D22BE3001C00547148 /* MainPageExtensions.swift */; };
@@ -38,7 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94C810CB2BE2F0B300547148 /* Service in Frameworks */,
+				943E117F2BE6816900ED2A92 /* Service in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,7 +151,7 @@
 			);
 			name = "23. Modularization-Swift Package Manager";
 			packageProductDependencies = (
-				94C810CA2BE2F0B300547148 /* Service */,
+				943E117E2BE6816900ED2A92 /* Service */,
 			);
 			productName = "23. Modularization-Swift Package Manager";
 			productReference = 94CCEB122BE2E83F009D97AE /* 23. Modularization-Swift Package Manager.app */;
@@ -182,7 +182,7 @@
 			);
 			mainGroup = 94CCEB092BE2E83F009D97AE;
 			packageReferences = (
-				94C810C92BE2F0B300547148 /* XCLocalSwiftPackageReference "../Service" */,
+				943E117D2BE6816900ED2A92 /* XCRemoteSwiftPackageReference "Service" */,
 			);
 			productRefGroup = 94CCEB132BE2E83F009D97AE /* Products */;
 			projectDirPath = "";
@@ -440,16 +440,21 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		94C810C92BE2F0B300547148 /* XCLocalSwiftPackageReference "../Service" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Service;
+/* Begin XCRemoteSwiftPackageReference section */
+		943E117D2BE6816900ED2A92 /* XCRemoteSwiftPackageReference "Service" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ggvagvalia/Service.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		94C810CA2BE2F0B300547148 /* Service */ = {
+		943E117E2BE6816900ED2A92 /* Service */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 943E117D2BE6816900ED2A92 /* XCRemoteSwiftPackageReference "Service" */;
 			productName = Service;
 		};
 /* End XCSwiftPackageProductDependency section */

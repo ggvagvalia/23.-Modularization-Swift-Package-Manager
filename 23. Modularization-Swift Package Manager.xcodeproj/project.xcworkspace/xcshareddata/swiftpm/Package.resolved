@@ -1,0 +1,15 @@
+{
+  "originHash" : "4632b7fa0420c49353bebdf908faff6a227676b45b863208360f1d17d8cf6970",
+  "pins" : [
+    {
+      "identity" : "service",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ggvagvalia/Service.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ba8842a72ddbd2c5f4a1764df3db2d9503578b1c"
+      }
+    }
+  ],
+  "version" : 3
+}
